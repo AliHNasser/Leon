@@ -208,10 +208,20 @@ body {
     }
 }
 .services-section .container .services {
+    display: flex;
+    gap: 30px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+@media (max-width: 1199px) {
+    .services-section .container .services {
+        gap: 0;
+    }
+}
+.services-section .container .services .services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    column-gap: 30px;
-    margin-top: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(350px , 1fr));
+    gap: 30px;
 }
 .services-section .container .services .column:last-child .image {
     position: relative;
@@ -227,19 +237,23 @@ body {
     height: calc(100% + 80px);
     background-color: var(--secondaryColor);
 }
+@media (max-width: 1399px) {
+    .services-section .container .services .column:last-child .image::before {
+        display: none;
+    }
+}
 .services-section .container .services .column:last-child img {
     width: 260px;
     position: relative;
     z-index: 3;
     
 }
-.services-section .container .services .column .service {
+.services-section .container .services .services-container .service {
     display: flex;
-    margin-bottom: 40px;
 }
 /* Mobile Media Query */
 @media (max-width: 1199px) {
-    .services-section .container .services .column .service {
+    .services-section .container .services .services-container .service {
         flex-direction: column;
         text-align: center;
         padding: 20px;
@@ -248,19 +262,19 @@ body {
         display: none;
     }
 }
-.services-section .container .services .column .service i {
+.services-section .container .services .services-container .service i {
     color: var(--mainColor);
     flex-basis: 60px;
     font-size: 30px;
 }
-.services-section .container .services .column .service .text {
+.services-section .container .services .services-container .service .text {
     flex: 1;
 }
-.services-section .container .services .column .service .text h3 {
+.services-section .container .services .services-container .service .text h3 {
     font-weight: 800;
     margin: 0 0 30px;
 }
-.services-section .container .services .column .service .text p {
+.services-section .container .services .services-container .service .text p {
     line-height: 1.6;
     font-weight: 300;
     color: #444;
