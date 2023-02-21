@@ -41,6 +41,14 @@ body {
 }
 /* End Global Rules */
 /* Start Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    background-color: white;
+}
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -97,16 +105,17 @@ body {
     border-width: 15px;
     border-style: solid;
     border-color: transparent transparent rgb(238, 238, 238);
-    top: -30px;
-    right: 5px;
+    top: -29px;
+    right: 0;
 }
 .header .container .nav .links a {
     text-decoration: none;
     color: #333;
-    padding: 30px;
+    padding: 20px;
     line-height: 1.8;
     font-size: 25px;
     transition: 0.3s;
+    display: block;
 }
 .header .container .nav .links a:hover {
     padding-left: 50px;
